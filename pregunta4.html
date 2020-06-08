@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Practica 4</title>
+</head>
+<body>
+    <input type="number" id="Numero" placeholder="Ingresar numero"></br>
+    <button onclick="busqueda()">Verificar</button>
+    <p id="Resultado"></p>
+</body>
+<script>
+    function busqueda(){
+        var nro = document.getElementById("Numero").value;
+        if(nro<20 || nro>400){
+            document.getElementById("Resultado").innerHTML="El numero no esta entre ninguno de los numeros dados";
+        }else if(nro>=20 && nro<=100 ){
+            document.getElementById("Resultado").innerHTML="El numero esta entre 20 y 100 ";
+        }else if(nro>=100 && nro<=400){
+            document.getElementById("Resultado").innerHTML="El numero esta entre 100 y 400";
+        }
+    }
+</script>
+</html>
