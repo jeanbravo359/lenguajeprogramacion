@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!--Escriba un programa que pida 3 números y escriba en la pantalla el mayor de los tres -->
+    <input type="number" id="nro1" placeholder="numero1"></br>
+    <input type="number" id="nro2" placeholder="numero2"></br>
+    <input type="number" id="nro3" placeholder="numero3"></br>
+    <button onclick="buscar_mayor()">Comparar</button>
+    <p id="mayor"></p>
+</body>
+<script>
+    function buscar_mayor(){
+        var arreglo=[2];
+        arreglo[0]=document.getElementById("nro1").value;
+        arreglo[1]=document.getElementById("nro2").value;
+        arreglo[2]=document.getElementById("nro3").value;
+        var aux = 0;
+        var N=3;
+        for(var i=0 ; i<N; i++){
+        for(var j=i+1; j<N; j++){
+                if(arreglo[i]>arreglo[j]){
+                    aux=arreglo[i];
+                    arreglo[i]=arreglo[j];
+                    arreglo[j]=aux;
+                }}}
+           document.getElementById("mayor").innerHTML="El mayor es "+arreglo[2];
+    }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="Celcius" placeholder="Ingresar temperatura"></br>
+    <button onclick="boton()">transformar</button>
+    <p id="Resultado"></p>
+</body>
+<script>
+    function convertir(cel){
+        var resultado=cel*9/5+32;
+        return resultado
+    }
+    function boton(){
+        var res=document.getElementById("Celcius").value;
+        var accion = convertir(res);
+        document.getElementById("Resultado").innerHTML="los grados en Fahrenheit "+accion+" F°."
+    }
+</script>
+</html>
+
+ </script>
+</html>

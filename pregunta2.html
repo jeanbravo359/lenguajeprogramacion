@@ -1,0 +1,34 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Escriba un programa que nos diga si un número dado es primo (no es divisible por ninguno otro número que no sea él mismo o la unidad)-->
+    <input type="number" id="nro" placeholder="Ingresar valor"></br>
+    <button onclick="evaluar()">Comprobar</button>
+    <p id="tipo_num"></p>
+</body>
+<script>
+    function evaluar(){
+        var number=document.getElementById("nro").value;
+        var a=0;
+        var divisores = {};
+        for(var i=1;i<=number;i++){
+            if(number%i==0){
+                divisores[a]=i;
+                a++;
+            }}
+        if (a==2){
+            document.getElementById("tipo_num").innerHTML="El numero no es Primo";   
+        }else{
+            document.getElementById("tipo_num").innerHTML="El numero es Primo";
+        }
+
+    }
+    
+</script>
+</html>
